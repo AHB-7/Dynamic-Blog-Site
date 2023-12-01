@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <script
+            src="https://kit.fontawesome.com/c4f6dc2483.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="Css/style.css" />
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <a href="./index.html"
+                        ><i class="fa-solid fa-house nav-icon"> </i>
+                        <p class="nav-txt nav-active-txt">Home</p>
+                    </a>
+                    <a href="html/blogs.html"
+                        ><i class="fa-solid fa-newspaper nav-icon"> </i>
+                        <p class="nav-txt">Articles</p>
+                    </a>
+                    <a href="html/cotact.html"
+                        ><i class="fa-solid fa-comment nav-icon"> </i>
+                        <p class="nav-txt">Contact</p>
+                    </a>
+                    <a href="html/about.html"
+                        ><i class="fa-solid fa-circle-info nav-icon"> </i>
+                        <p class="nav-txt">About Us</p>
+                    </a>
+                </div>
+                <form class="search-container">
+                    <button type="submit " class="search-btn-button">
+                        <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                    </button>
+                    <label for="search" class="search-txt"></label>
+                    <input
+                        class="search"
+                        id="search"
+                        type="search"
+                        data-search
+                        minlength="1"
+                        placeholder="search..."
+                    />
+                </form>
+            </nav>
+        </header>
+        <main class="container-for-cards">
+            <section class="head-info">
+                <h1>Leatest Articles</h1>
+                <div class="slider-container">
+                    <a class="left">
+                        <i class="fa-solid fa-caret-left"></i>
+                    </a>
+                    <div class="slider-conent">
+                        <section class="loder-container">
+                            <span class="loader"></span>
+                        </section>
+                    </div>
+                    <a class="right">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                </div>
+            </section>
+            <h1>Most popular articles</h1>
+            <section class="container-for-items"></section>
+        </main>
+        <script type="module" src="js/formain.js"></script>
+    </body>
+</html>
