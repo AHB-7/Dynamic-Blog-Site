@@ -10,17 +10,17 @@ const id = params.get("id");
 
 const url = "https://mig.alanbrim.no/wp-json/wc/store/products/" + id;
 
+const containerI = document.querySelector(".main-container");
 async function fetchGame() {
     try {
         const response = await fetch(url);
         const json = await response.json();
+        containerI.innerHTML = "";
 
-        container.innerHTML = "";
-
-        container.innerHTML = `<h2>${json.name}</h2>
-        <img class="item-img" src="${json.images[0].src}" alt="" />
+        containerI.innerHTML = `
+        <h1>${json.name}</h1>
+        <img class="img-one" src="${json.images[0].src}" alt="" />
         <p>${json.description}</p>
-
         `;
     } catch (err) {
         console.log(err);

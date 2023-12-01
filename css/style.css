@@ -190,7 +190,6 @@ Slider Ish --------------------------------
 -------------------------------*/
 main {
     width: 100%;
-    background: rgba(0, 0, 0, 0.563);
 }
 .slider-container {
     width: 100%;
@@ -244,16 +243,16 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    gap: 1rem;
+    width: 16rem;
 }
 .img-changer {
-    width: 8rem;
+    position: relative;
+    width: 8.5rem;
     height: 5rem;
     border-radius: 1rem;
-    opacity: 0.8;
     object-fit: cover;
     transition: 0.8s;
+    border: 0.1rem var(--wyt-color) solid;
 }
 .img-changer:hover {
     opacity: 1;
@@ -325,18 +324,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.container-for-cards::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.202);
-    border-radius: 0.8rem;
-}
 
-.container-for-cards::-webkit-scrollbar-thumb {
-    background: rgba(254, 106, 0, 0.526);
-    border-radius: 0.8rem;
-}
-.container-for-cards::-webkit-scrollbar-thumb:hover {
-    background: var(--brand-color);
-}
 .container-for-items {
     display: flex;
     justify-content: center;
@@ -360,10 +348,10 @@ main {
 }
 
 .item-img {
-    width: 25rem;
+    width: 100%;
+    position: absolute;
     height: 10rem;
     object-fit: cover;
-    padding-right: 3rem;
     border-radius: 0.5rem 0.5rem 0 0;
     transition: 0.5s;
 }
@@ -376,6 +364,7 @@ main {
     overflow: hidden;
     z-index: 1;
     font-size: 0.8rem;
+    margin-top: 10rem;
 }
 
 .item-txt > h2 {
@@ -397,7 +386,7 @@ main {
 }
 .words-counter {
     text-align: center;
-    margin: 0.5rem auto;
+    margin: 0rem auto 1.1rem auto;
     color: var(--bk-color);
 }
 .words-counter > strong {
@@ -408,7 +397,7 @@ main {
 }
 .card-container:hover > .item-img {
     position: absolute;
-    width: 25rem;
+    width: 100%;
     min-height: 24rem;
     border-radius: 1.5rem;
     z-index: 0;
@@ -418,6 +407,7 @@ main {
 
 .card-container:hover > .item-txt {
     max-height: 26rem;
+    margin-top: 0rem;
     z-index: 1;
     color: var(--wyt-color);
 }
@@ -486,7 +476,7 @@ main {
     text-decoration: none;
 }
 .card-container:hover > .main-btn-container {
-    margin: 1rem auto 2rem auto;
+    margin: 0.5rem auto 1rem auto;
 }
 
 .card-container:hover > .main-btn-container > .main-btn {
@@ -575,6 +565,12 @@ main {
         position: relative;
         flex: 0 1 calc(50% + 1rem);
         transition: 0.4s;
+    }
+    .item-img {
+        height: 12rem;
+    }
+    .item-txt {
+        margin-top: 12rem;
     }
 }
 @media screen and (max-width: 645px) {

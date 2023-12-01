@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-one {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+}
+.container-for-cards {
+    padding: 0;
+    margin: 0;
+}
