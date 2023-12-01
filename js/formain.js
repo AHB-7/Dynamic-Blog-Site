@@ -7,10 +7,11 @@ import { url, containerForCards, loder } from "./variables.js";
 async function getGames(articles) {
     try {
         for (let i = 3; i < 7; i++) {
+            const wordCount = articles[i].description.length;
+            const readingTime = Math.ceil(wordCount / 450);
             containerForCards.innerHTML += `
                 <div class="card-container">
-                   
-                    <img class="item-img" src="${articles[i].images[0].src}" alt="" />
+                    <img class="item-img" src="${articles[i].images[0].src}" alt="Article Img"/>
                     <div class="item-txt">
                         <h2>${articles[i].name}</h2>
                         <ul>
@@ -23,6 +24,7 @@ async function getGames(articles) {
                     <div class="main-btn-container">
                         <a href="/html/readmore.html?id=${articles[i].id}" class="main-btn"> Read More </a>
                     </div> 
+                    <p class="words-counter"> Estimated time to read:<strong> ${readingTime}</strong></p>
                     <div class="hover-it-container">
                     <i class="fa-solid fa-chevron-up hover-it"></i>
                     </div>
@@ -83,8 +85,13 @@ async function displaySlider(slidercontaint) {
                                         </a>
                                     </div>
                             </div>
+                            <div class="aditional-imgs">
+                            <a href="/html/readmore.html?id=${currentItem.id}"> <img class="img-changer" src="${currentItem.images[2].src}"></img>                            </a>
+                            <a href="/html/readmore.html?id=${currentItem.id}"> <img class="img-changer" src="${currentItem.images[3].src}"></img>                            </a>
+                            </div>  
                     </div>      
                 </div>
+               
                                
 `;
             }

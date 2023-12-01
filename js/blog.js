@@ -19,6 +19,8 @@ async function getGames(articles) {
         const totArticlesNum = articles.length;
         const displayArticles = articles.slice(0, limit);
         for (let i = 0; i < displayArticles.length; i++) {
+            const wordCount = articles[i].description.length;
+            const readingTime = Math.ceil(wordCount / 450);
             containerForCards.innerHTML += `
                 <div class="card-container">
                    
@@ -43,6 +45,7 @@ async function getGames(articles) {
                             articles[i].id
                         }" class="main-btn"> Read More </a>
                     </div> 
+                    <p class="words-counter"> Estimated time to read:<strong> ${readingTime}</strong></p>
                     <div class="hover-it-container">
                     <p class="articlesNum">${i + 1}/${totArticlesNum}</p>
                     <i class="fa-solid fa-chevron-up hover-it"></i>
@@ -75,6 +78,7 @@ async function fetchAndDisplayAllGames() {
         console.log("err");
     }
 }
+
 fetchAndDisplayAllGames();
 
 //----------------------------------------------------------------
@@ -85,7 +89,6 @@ fetchAndDisplayAllGames();
 // Filter Items----------------------------------------------------------------
 //----------------------------------------------------------------
 
-let filterOn = false;
 filtringItems.style.display = "none";
 
 containerForFilters.addEventListener("mouseenter", showFilter);
