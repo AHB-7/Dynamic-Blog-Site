@@ -221,6 +221,7 @@ main {
     width: 17rem;
     height: 12rem;
     border-radius: 1rem;
+    border: 0.1rem var(--wyt-color) solid;
 }
 .slider-title > h2 {
     font-size: 1.1rem;

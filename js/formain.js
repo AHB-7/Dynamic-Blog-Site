@@ -64,6 +64,7 @@ async function displaySlider(slidercontaint) {
             slider.innerHTML = "";
             const currentItem = slidercontaint[index];
             if (currentItem) {
+                // more work here
                 slider.innerHTML = `
                 <div id="slider-img" 
                 style="
