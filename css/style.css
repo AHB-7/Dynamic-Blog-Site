@@ -246,24 +246,7 @@ main {
         margin-top: 0rem;
     }
 }
-.aditional-imgs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16rem;
-}
-.img-changer {
-    position: relative;
-    width: 8.5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    object-fit: cover;
-    transition: 0.8s;
-    border: 0.1rem var(--wyt-color) solid;
-}
-.img-changer:hover {
-    opacity: 1;
-}
+
 .head-info {
     width: 100%;
     height: min-content;

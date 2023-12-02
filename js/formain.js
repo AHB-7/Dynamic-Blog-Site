@@ -92,10 +92,6 @@ async function displaySlider(slidercontaint) {
                                         </a>
                                     </div>
                             </div>
-                            <div class="aditional-imgs">
-                            <a href="/html/readmore.html?id=${currentItem.id}"> <img class="img-changer" src="${currentItem.images[2].src}"></img>                            </a>
-                            <a href="/html/readmore.html?id=${currentItem.id}"> <img class="img-changer" src="${currentItem.images[3].src}"></img>                            </a>
-                            </div>  
                     </div>      
                 </div>
                
