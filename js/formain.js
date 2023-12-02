@@ -1,4 +1,10 @@
-import { url, containerForCards, loder } from "./variables.js";
+import {
+    url,
+    containerForCards,
+    loder,
+    somethigWentWrong,
+    main,
+} from "./variables.js";
 
 //----------------------------------------------------------------
 //Items Containers
@@ -8,7 +14,7 @@ async function getGames(articles) {
     try {
         for (let i = 3; i < 7; i++) {
             const wordCount = articles[i].description.length;
-            const readingTime = Math.ceil(wordCount / 350);
+            const readingTime = Math.ceil(wordCount / 355);
             containerForCards.innerHTML += `
                 <div class="card-container">
                     <img class="item-img" src="${articles[i].images[0].src}" alt="Article Img"/>
@@ -32,7 +38,7 @@ async function getGames(articles) {
             `;
         }
     } catch (err) {
-        console.log(err);
+        main.innerHTML = somethigWentWrong;
     }
 }
 if (location) {
@@ -44,7 +50,7 @@ async function fetchAndDisplayAllGames() {
         const articles = result;
         getGames(articles);
     } catch (err) {
-        console.log("err");
+        main.innerHTML = somethigWentWrong;
     }
 }
 
@@ -97,7 +103,7 @@ async function displaySlider(slidercontaint) {
 `;
             }
         } catch (e) {
-            console.log("err");
+            main.innerHTML = somethigWentWrong;
         }
     }
     sliderUpdate();
@@ -132,7 +138,7 @@ async function fetchSliders() {
         loder.style.display = "none";
         displaySlider(slidercontaint);
     } catch (e) {
-        console.log("err");
+        main.innerHTML = somethigWentWrong;
     }
 }
 

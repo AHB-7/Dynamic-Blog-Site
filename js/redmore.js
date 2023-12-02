@@ -1,4 +1,4 @@
-import { loder } from "./variables.js";
+import { loder, somethigWentWrong, main } from "./variables.js";
 
 const container = document.querySelector(".container-for-items");
 
@@ -38,8 +38,7 @@ async function fetchGame() {
         </article>
         `;
     } catch (err) {
-        console.log(err);
-        container.innerHTML = `<p class="error">There was an error, please reload the page!</p>`;
+        main.innerHTML = somethigWentWrong;
     }
 }
 

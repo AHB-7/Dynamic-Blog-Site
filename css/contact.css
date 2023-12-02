@@ -74,8 +74,9 @@ Container for inputs--------------------------------
     max-width: 20rem;
     height: 2.5rem;
 }
+
 .input-container:focus {
-    width: 20rem;
+    max-width: 20rem;
 }
 /*-------------------------------- 
 Inputs and there validations--------------------------------

@@ -1,6 +1,27 @@
 // ----------------------------------------------
 // ------------Validation Functions______________
 // ----------------------------------------------
+import {
+    forms,
+    submitBtn,
+    wrongInfoDilevered,
+    fullName,
+    subject,
+    emailInput,
+    messageInput,
+    valdationMsgName,
+    valdationMsgSubject,
+    valdationMsgEmail,
+    valdationMsgMessage,
+    message,
+    validationInput,
+} from "./variables.js";
+const valdationFunction = [
+    checkInputsName,
+    checkInputsSubject,
+    checkInputsEmail,
+    checkInputsMessage,
+];
 function checkLength(requiredInput, inputLength) {
     if (requiredInput.length <= inputLength) {
         return true;
@@ -13,18 +34,6 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-
-const forms = document.querySelectorAll(".form");
-const submitBtn = document.querySelector(".send-btn");
-const wrongInfoDilevered = document.querySelector(".input-container-wrong");
-const fullName = document.querySelector("#fullName");
-const subject = document.querySelector("#subject");
-const emailInput = document.querySelector("#email");
-const messageInput = document.querySelector("#message");
-const valdationMsgName = document.querySelector("#valdationMsgName");
-const valdationMsgSubject = document.querySelector("#valdationMsgSubject");
-const valdationMsgEmail = document.querySelector("#valdationMsgMail");
-const valdationMsgMessage = document.querySelector("#valdationMsgMessage");
 
 function checkInputsName() {
     if (checkLength(fullName.value, 4)) {
@@ -72,10 +81,10 @@ function checkInputsMessage() {
         messageInput.style.border = "green 2px solid";
     }
 }
-fullName.addEventListener("keyup", checkInputsName);
-subject.addEventListener("keyup", checkInputsSubject);
-emailInput.addEventListener("keyup", checkInputsEmail);
-messageInput.addEventListener("keyup", checkInputsMessage);
+
+validationInput.forEach((input, index) => {
+    input.addEventListener("keyup", valdationFunction[index]);
+});
 
 forms.forEach(function (form) {
     form.addEventListener("submit", function (event) {
@@ -102,22 +111,16 @@ function checkOverallValidity() {
         submitBtn.style.opacity = "0.6";
     }
 }
+validationInput.forEach((input) => {
+    input.addEventListener("keyup", checkOverallValidity);
+});
 
-fullName.addEventListener("keyup", checkOverallValidity);
-subject.addEventListener("keyup", checkOverallValidity);
-emailInput.addEventListener("keyup", checkOverallValidity);
-messageInput.addEventListener("keyup", checkOverallValidity);
 submitBtn.addEventListener("click", checkOverallValidity);
 
-const message = document.querySelector(".thanks-messege");
-// const newMessage = document.querySelector(".new-message");
 function thanksMessage() {
     submitBtn.addEventListener("click", function () {
         message.classList.add("thanks-messege-animation");
-        fullName.value = "";
-        subject.value = "";
-        emailInput.value = "";
-        messageInput.value = "";
+        validationInput.forEach((input) => (input.value = ""));
         submitBtn.style.display = "none";
     });
 }

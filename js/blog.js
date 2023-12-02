@@ -3,12 +3,12 @@ import {
     containerForCards,
     loder,
     showMore,
-    filterBtn,
     filterSelector,
     filtringItems,
     containerForFilters,
     showFilter,
     hideFilter,
+    somethigWentWrong,
     main,
 } from "./variables.js";
 
@@ -64,7 +64,7 @@ async function getGames(articles) {
             }
         });
     } catch (err) {
-        console.log(err);
+        main.innerHTML = somethigWentWrong;
     }
 }
 
@@ -77,15 +77,11 @@ async function fetchAndDisplayAllGames() {
 
         getGames(currentArticles);
     } catch (err) {
-        console.log("err");
+        main.innerHTML = somethigWentWrong;
     }
 }
 
 fetchAndDisplayAllGames();
-
-//----------------------------------------------------------------
-// show more Items----------------------------------------------------------------
-//----------------------------------------------------------------
 
 //----------------------------------------------------------------
 // Filter Items----------------------------------------------------------------
@@ -115,7 +111,7 @@ async function filterCategory(category) {
         currentArticles = filteredArticles;
         getGames(currentArticles);
     } catch (err) {
-        console.log(err);
+        main.innerHTML = somethigWentWrong;
     }
 }
 filterSelector.forEach((filterButton) => {
