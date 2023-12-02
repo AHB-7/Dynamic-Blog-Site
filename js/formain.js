@@ -8,23 +8,23 @@ async function getGames(articles) {
     try {
         for (let i = 3; i < 7; i++) {
             const wordCount = articles[i].description.length;
-            const readingTime = Math.ceil(wordCount / 450);
+            const readingTime = Math.ceil(wordCount / 350);
             containerForCards.innerHTML += `
                 <div class="card-container">
                     <img class="item-img" src="${articles[i].images[0].src}" alt="Article Img"/>
                     <div class="item-txt">
                         <h2>${articles[i].name}</h2>
                         <ul>
-                            <li>Author: MadMan</li>
-                            <li>Published: ${articles[i].attributes[0].terms[0].name}</li>
-                            <li>Category: ${articles[i].categories[0].name}</li>
-                        </ul>
+                        <li>Authour: ${articles[i].attributes[1].terms[0].name}</li>
+                        <li>Published: ${articles[i].attributes[0].terms[0].name}</li>
+                        <li>Category: ${articles[i].categories[0].name}</li>
+                    </ul>
                         <p>${articles[i].description}</p>
                     </div>
                     <div class="main-btn-container">
                         <a href="/html/readmore.html?id=${articles[i].id}" class="main-btn"> Read More </a>
                     </div> 
-                    <p class="words-counter"> Estimated time to read:<strong> ${readingTime}</strong></p>
+                    <p class="words-counter"> Reading Time:<strong> ${readingTime}min</strong></p>
                     <div class="hover-it-container">
                     <i class="fa-solid fa-chevron-up hover-it"></i>
                     </div>

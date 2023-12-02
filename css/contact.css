@@ -177,63 +177,20 @@ Thanks Messages --------------------------------
     font-size: 1rem;
 }
 
-/* sosial media colors */
-.sosial-media-icons {
-    font-size: 3rem;
-}
-.columna > .last-conatainer {
-    padding: 0;
-}
 .last-conatainer {
     height: 15rem;
     text-align: center;
     flex: 1 0 20rem;
 }
-
-.last-conatainer {
-    max-width: 100%;
-}
-.sosial-media-container,
-.last-conatainer {
+.colum {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-.last-conatainer:first-child {
-    padding-top: 0rem;
-}
-.instagram {
-    color: transparent !important;
-}
-.instagram::before {
-    position: relative;
-    top: 0;
-    left: 0;
+    justify-content: space-between;
+    gap: 1.5rem;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    z-index: 0;
-}
-.facebook {
-    color: #1877f2;
-}
-
-.tiktok {
-    color: black;
-    font-size: 2.7rem;
-}
-.pintrest {
-    color: red;
+    max-width: 55rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
 }
 .last-conatainer > ul > li {
     list-style: none;
@@ -241,13 +198,22 @@ Thanks Messages --------------------------------
     font-weight: 600;
     text-align: start;
 }
-.colum {
+.last-conatainer:first-child {
+    padding-top: 0rem;
+}
+.last-conatainer:last-child {
     display: flex;
-    justify-content: space-around;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 55rem;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
+    justify-content: center;
+    gap: 2rem;
+}
+.last-conatainer {
+    max-width: 100%;
+}
+.sosial-media-icons {
+    font-size: 2.5rem;
+}
+.tiktok {
+    color: black;
+    font-size: 2.2rem;
 }

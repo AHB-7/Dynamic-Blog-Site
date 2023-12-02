@@ -6,9 +6,9 @@
 }
 .first-section {
     display: flex;
-    justify-content: start;
     align-items: flex-start;
-    height: 35rem;
+    height: auto;
+    max-width: 63rem;
     margin-top: 4rem;
 }
 .img-one {
@@ -18,27 +18,108 @@
     overflow: hidden;
     border-top-left-radius: 100%;
 }
+.title-and-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 35rem;
+}
 .game-title {
-    margin-right: -6rem;
+    font-size: 1.4rem;
+    margin: 0 -6rem 0 0;
     width: 40rem;
+    line-height: 2rem;
+    letter-spacing: 0.4rem;
+    text-align: left;
+}
+.title-and-info > ul {
+    color: var(--wyt-color);
+    text-justify: bottom;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    height: 10rem;
+    list-style: none;
 }
 .container-for-cards {
     padding: 5rem 0 0 0;
     margin: 0;
 }
 .game-article {
+    display: flex;
+    flex-direction: column;
     width: 60rem;
     color: var(--wyt-color);
+    line-height: 1.6rem;
+    letter-spacing: 0.2rem;
 }
-.img-two {
-    display: inline-block;
+.game-article > p {
+    padding: 1rem 0 1rem 1rem;
+}
+
+.game-article > p:nth-of-type(odd):not(:first-of-type),
+.game-article > h3:nth-of-type(odd):not(:first-of-type) {
+    background-color: rgba(0, 0, 0, 0.472);
+    padding: 1rem 0 1rem 1rem;
+    border-left: 0.15rem solid var(--wyt-color);
+}
+.game-article > p:nth-of-type(even),
+.game-article > h3:nth-of-type(even) {
+    background-color: rgba(65, 65, 65, 0.341);
+    padding: 1rem 0 1rem 1rem;
+}
+
+.game-article > div {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5rem auto;
+}
+
+.game-article > div > img {
+    max-width: 100%;
     width: 20rem;
     height: 20rem;
-    vertical-align: middle;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 1rem;
 }
-.gallery-1 {
-    display: flex;
-}
-.gallery-1 > img {
-    width: 40rem;
+@media screen and (max-width: 980px), screen and (max-height: 600px) {
+    * {
+        transition: 0.5s;
+    }
+    .first-section {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-one {
+        width: 80%;
+        height: 24rem;
+    }
+    .title-and-info {
+        width: auto;
+        align-items: start;
+        height: auto;
+    }
+    .game-title {
+        width: 100%;
+        margin: auto auto auto 1rem;
+        padding: 0.4rem;
+    }
+
+    .title-and-info > ul {
+        height: auto;
+        margin: auto auto auto 1rem;
+    }
+    .title-and-info > ul > li {
+        width: 100%;
+    }
+    .game-article {
+        width: 100%;
+    }
 }
