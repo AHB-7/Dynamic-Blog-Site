@@ -7,6 +7,7 @@ const filterBtn = document.querySelector(".filter-btn");
 const containerForFilters = document.querySelector(".container-for-filter");
 const showMore = document.querySelector(".show-more");
 const all = document.getElementById("all");
+const main = document.querySelector("main");
 const showFilter = function () {
     filtringItems.style.display = "inline-flex";
 };
@@ -25,4 +26,5 @@ export {
     containerForFilters,
     showFilter,
     hideFilter,
+    main,
 };

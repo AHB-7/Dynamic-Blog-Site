@@ -9,6 +9,7 @@ import {
     containerForFilters,
     showFilter,
     hideFilter,
+    main,
 } from "./variables.js";
 
 let currentArticles = [];
@@ -73,6 +74,7 @@ async function fetchAndDisplayAllGames() {
         const response = await fetch(url);
         currentArticles = await response.json();
         loder.style.display = "none";
+
         getGames(currentArticles);
     } catch (err) {
         console.log("err");

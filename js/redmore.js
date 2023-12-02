@@ -1,6 +1,6 @@
-const container = document.querySelector(".container-for-items");
+import { loder } from "./variables.js";
 
-console.log(container);
+const container = document.querySelector(".container-for-items");
 
 const quaryStrings = document.location.search;
 
@@ -11,12 +11,12 @@ const id = params.get("id");
 const url = "https://mig.alanbrim.no/wp-json/wc/store/products/" + id;
 
 const containerI = document.querySelector(".main-container");
+
 async function fetchGame() {
     try {
         const response = await fetch(url);
         const json = await response.json();
         containerI.innerHTML = "";
-
         containerI.innerHTML = `
         <div class="first-section">
         <div class="title-and-info" ;>
