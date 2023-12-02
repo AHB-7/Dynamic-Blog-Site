@@ -18,9 +18,22 @@ async function fetchGame() {
         containerI.innerHTML = "";
 
         containerI.innerHTML = `
-        <h1>${json.name}</h1>
-        <img class="img-one" src="${json.images[0].src}" alt="" />
-        <p>${json.description}</p>
+        <div class="first-section">
+        <h1 class="game-title">${json.name}</h1>
+        <img
+            class="img-one"
+            src="${json.images[0].src}"
+            alt="Game Image"
+        />
+        </div>
+        <article class="game-article">
+        ${json.description}
+        <img
+            class="img-two"
+            src="${json.images[1].src}"
+            alt="Game Image"
+        />
+        </article>
         `;
     } catch (err) {
         console.log(err);

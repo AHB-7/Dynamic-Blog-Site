@@ -1,19 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.first-section {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    height: 35rem;
+    margin-top: 4rem;
+}
 .img-one {
-    width: 100%;
-    height: 40rem;
+    height: 30rem;
+    width: 36rem;
     object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 100%;
+}
+.game-title {
+    margin-right: -6rem;
+    width: 40rem;
 }
 .container-for-cards {
-    padding: 0;
+    padding: 5rem 0 0 0;
     margin: 0;
+}
+.game-article {
+    width: 60rem;
+    color: var(--wyt-color);
+}
+.img-two {
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    vertical-align: middle;
+}
+.gallery-1 {
+    display: flex;
+}
+.gallery-1 > img {
+    width: 40rem;
 }
