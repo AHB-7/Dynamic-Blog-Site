@@ -617,6 +617,38 @@ footer {
     border-radius: 0.8rem;
     background-color: var(--brand-color);
 }
+
+.img-open {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.over-img {
+    position: relative;
+    max-width: 100%;
+    max-height: 25rem;
+    object-fit: contain;
+    border-radius: 0;
+    transform: scale(1.1);
+    z-index: 2;
+    padding: 0 0 0 4rem;
+}
+.close-img {
+    position: relative;
+    align-self: self-start;
+    top: 0;
+    color: var(--wyt-color);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 3rem 0 0 2rem;
+}
 @media screen and (max-width: 1230px), screen and (max-height: 550px) {
     .card-container {
         height: 24rem;

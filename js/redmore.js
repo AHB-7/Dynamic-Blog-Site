@@ -37,9 +37,36 @@ async function fetchGame() {
         ${json.description}
         </article>
         `;
+        const images = document.querySelectorAll("img");
+        images.forEach((img) => {
+            img.addEventListener("click", function () {
+                const newDiv = document.createElement("div");
+                const newImg = document.createElement("img");
+                const close = document.createElement("p");
+                newImg.src = img.src;
+                close.innerHTML = "X";
+                newImg.classList.add("over-img");
+                newDiv.classList.add("img-open");
+                close.classList.add("close-img");
+                main.appendChild(newDiv);
+                newDiv.appendChild(newImg);
+                newDiv.appendChild(close);
+                close.addEventListener("click", function () {
+                    main.removeChild(newDiv);
+                });
+                newDiv.addEventListener("click", function (e) {
+                    if (
+                        !newImg.contains(e.target) ||
+                        newDiv.containes(e.target)
+                    ) {
+                        main.removeChild(newDiv);
+                    } else {
+                    }
+                });
+            });
+        });
     } catch (err) {
         main.innerHTML = somethigWentWrong;
     }
 }
-
 fetchGame();
