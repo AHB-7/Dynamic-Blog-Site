@@ -28,7 +28,8 @@ async function fetchGame() {
             </ul>
         </div>
         <img
-            class="img-one"
+            class="img-one" 
+            loading="lazy" 
             src="${json.images[0].src}"
             alt="Game Image"
         />
@@ -44,6 +45,7 @@ async function fetchGame() {
                 const newImg = document.createElement("img");
                 const close = document.createElement("p");
                 newImg.src = img.src;
+                newImg.alt = img.alt;
                 close.innerHTML = "X";
                 newImg.classList.add("over-img");
                 newDiv.classList.add("img-open");

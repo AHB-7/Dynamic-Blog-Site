@@ -25,7 +25,7 @@ async function getGames(articles) {
             containerForCards.innerHTML += `
                 <div class="card-container">
                    
-                    <img class="item-img" src="${
+                    <img class="item-img"  loading="lazy"  src="${
                         articles[i].images[0].src
                     }" alt="Main Image of the Artickle" />
                     <div class="item-txt">

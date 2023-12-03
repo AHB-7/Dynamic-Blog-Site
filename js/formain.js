@@ -17,7 +17,7 @@ async function getGames(articles) {
             const readingTime = Math.ceil(wordCount / 355);
             containerForCards.innerHTML += `
                 <div class="card-container">
-                    <img class="item-img" src="${articles[i].images[0].src}" alt="Article Img"/>
+                    <img class="item-img" loading="lazy" src="${articles[i].images[0].src}" alt="Article Img"/>
                     <div class="item-txt">
                         <h2>${articles[i].name}</h2>
                         <ul>
@@ -102,6 +102,7 @@ async function displaySlider(slidercontaint) {
             main.innerHTML = somethigWentWrong;
         }
     }
+
     sliderUpdate();
     const rightBtn = document.querySelector(".right");
     const leftBtn = document.querySelector(".left");
@@ -137,5 +138,4 @@ async function fetchSliders() {
         main.innerHTML = somethigWentWrong;
     }
 }
-
 fetchSliders();
