@@ -1,0 +1,72 @@
+h1 {
+    font-size: 1.8rem;
+    padding: 2rem 0 0 0;
+}
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--brand-color);
+    padding: 1rem;
+    letter-spacing: 0.5rem;
+    word-spacing: 0.5rem;
+    align-self: self-start;
+}
+.main-container,
+.inner-container,
+.call-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-for-txt {
+    max-width: 60rem;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    padding: 1rem 1rem 0 1rem;
+    color: var(--wyt-color);
+}
+.container-for-txt > article > p {
+    margin-top: 2rem;
+}
+.avatar-imgs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0.1rem;
+}
+.inner-container {
+    gap: 1rem;
+    padding: 0 0.2rem;
+}
+.inner-container > h3 {
+    padding: 0 0 2rem 0;
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 8rem;
+    text-align: center;
+}
+.inner-container > img {
+    width: 6rem;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.inner-container:hover {
+    scale: 1.5;
+}
+.inner-container:hover > img {
+    opacity: 1;
+    z-index: 1;
+}
+.call {
+    text-decoration: none;
+    background-color: var(--brand-color);
+    padding: 1rem 4rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 1rem;
+}
+.call-section {
+    height: 6rem;
+}
