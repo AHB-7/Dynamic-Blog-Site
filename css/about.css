@@ -6,10 +6,8 @@ h2 {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--brand-color);
-    padding: 1rem;
     letter-spacing: 0.5rem;
     word-spacing: 0.5rem;
-    align-self: self-start;
 }
 .main-container,
 .inner-container,
@@ -34,7 +32,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem 0.1rem;
+    padding: 1rem 0.1rem 4rem 0.1rem;
 }
 .inner-container {
     gap: 1rem;
