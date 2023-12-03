@@ -89,11 +89,19 @@ fetchAndDisplayAllGames();
 
 filtringItems.style.display = "none";
 
+function handleClickOutside(event) {
+    if (
+        !containerForFilters.contains(event.target) &&
+        !filtringItems.contains(event.target)
+    ) {
+        filtringItems.style.display = "none";
+    }
+}
+
 containerForFilters.addEventListener("mouseenter", showFilter);
 containerForFilters.addEventListener("touchstart", showFilter);
 
-filtringItems.addEventListener("mouseleave", hideFilter);
-filtringItems.addEventListener("touchend", hideFilter);
+document.body.addEventListener("click", handleClickOutside);
 
 //----------------------------------------------------------------
 //filter selected items-----------------------------------------------------------

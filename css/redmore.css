@@ -56,17 +56,18 @@
 .game-article > p {
     padding: 1rem 0 1rem 1rem;
 }
-
+.game-article > p,
+.game-article > h3 {
+    padding: 1rem 0 1rem 1rem;
+}
 .game-article > p:nth-of-type(odd):not(:first-of-type),
 .game-article > h3:nth-of-type(odd):not(:first-of-type) {
     background-color: rgba(0, 0, 0, 0.472);
-    padding: 1rem 0 1rem 1rem;
     border-left: 0.15rem solid var(--wyt-color);
 }
 .game-article > p:nth-of-type(even),
 .game-article > h3:nth-of-type(even) {
     background-color: rgba(65, 65, 65, 0.341);
-    padding: 1rem 0 1rem 1rem;
 }
 
 .game-article > div {
@@ -102,7 +103,7 @@
         height: 24rem;
     }
     .title-and-info {
-        width: auto;
+        width: min-content;
         align-items: start;
         height: auto;
     }
