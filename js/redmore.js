@@ -51,15 +51,13 @@ async function fetchGame() {
                 main.appendChild(newDiv);
                 newDiv.appendChild(newImg);
                 newDiv.appendChild(close);
-                close.addEventListener("click", function () {
-                    main.removeChild(newDiv);
-                });
+
                 newDiv.addEventListener("click", function (e) {
-                    if (
-                        !newImg.contains(e.target) ||
-                        newDiv.containes(e.target)
-                    ) {
+                    if (!newImg.contains(e.target)) {
                         main.removeChild(newDiv);
+                        close.addEventListener("click", function () {
+                            main.removeChild(newDiv);
+                        });
                     } else {
                     }
                 });

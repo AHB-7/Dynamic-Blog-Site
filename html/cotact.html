@@ -73,6 +73,7 @@
                                     id="fullName"
                                     type="text"
                                     placeholder="Doe"
+                                    autocomplete="name"
                                 />
                                 <p
                                     class="validation-message"
@@ -91,6 +92,7 @@
                                     id="subject"
                                     type="text"
                                     placeholder="Subject"
+                                    autocomplete="subject"
                                 />
                                 <p
                                     class="validation-message"
@@ -108,7 +110,9 @@
                                 <input
                                     class="search input-container"
                                     id="email"
+                                    type="email"
                                     placeholder="yourmail@example.com"
+                                    autocomplete="email"
                                 />
                                 <p
                                     id="valdationMsgMail"
@@ -125,12 +129,12 @@
                                 >
                                 <textarea
                                     class="search input-container"
+                                    type="text"
                                     id="message"
                                     name="message"
                                     rows="4"
                                     cols="50"
-                                    minlength="1"
-                                    placeholder=""
+                                    autocomplete="text"
                                 ></textarea>
                                 <p
                                     class="validation-message"

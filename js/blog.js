@@ -27,7 +27,7 @@ async function getGames(articles) {
                    
                     <img class="item-img" src="${
                         articles[i].images[0].src
-                    }" alt="" />
+                    }" alt="Main Image of the Artickle" />
                     <div class="item-txt">
                         <h2>${articles[i].name}</h2>
                         <ul>
