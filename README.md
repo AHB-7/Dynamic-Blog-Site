@@ -17,7 +17,9 @@ A dynamic blog site powered by a REST API for easy content management.
 
 This dynamic blog site leverages the WordPress REST API to make publishing and updating blog content a breeze, even for users without coding knowledge.
 
+
 It features a clean and responsive layout, making it suitable for all screen sizes. The scroller on the home page allows you to view the last three blogs that have been published, while the container below it will display the next four blog posts.
+
 
 The inputs on the contact page will not be sent if the information entered does not match the requested information.
 
