@@ -65,7 +65,7 @@ Email: ab@alanbrim.no
 
 ### More about me
 
-<p style="width:400px">By clicking the button below, you will be dircted to my personal website and gett access to my latest projects.</p>
+<p style="width:400px">By clicking the button below, you will be directed to my personal website and gain access to my latest projects.</p>
 
 </br>
 
